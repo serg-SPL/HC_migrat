@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Bestellung - Sportlädchen Hilfezentrum</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+        }
+        /* Style for active navigation links, if needed */
+        .active-link {
+            font-weight: 700;
+            color: #1e40af; /* blue-800 */
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+        
+        <!-- Main Container for the entire application -->
+        <div id="app-container" class="w-full max-w-4xl">
+
+            <!-- ============================================== -->
+            <!-- ======== Main "Meine Bestellung" Page ======== -->
+            <!-- ============================================== -->
+            <div id="main-page">
+                <!-- Header Section -->
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Meine Bestellung</h1>
+                    <p class="text-lg sm:text-xl text-gray-600">Alles, was du über deine Bestellungen bei Sportlädchen wissen musst.</p>
+                </header>
+
+                <!-- Main Content Area -->
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-8">
+
+                    <!-- Versand & Lieferung Section -->
+                    <section class="border-b border-gray-200 pb-6">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">Versand & Lieferung</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-md shadow-sm">
+                                <h3 class="font-semibold text-lg text-blue-800 mb-2">Sendungsverfolgung & Status</h3>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><a href="#" class="nav-link text-blue-600 hover:underline" data-target="dhl-page">Tipps und Tricks zur DHL-Sendungsverfolgung</a></li>
+                                    <li><a href="#" class="nav-link text-blue-600 hover:underline" data-target="order-status-page">Wie kannst du den Status deiner Bestellung überprüfen?</a></li>
+                                    <li><a href="#" class="nav-link text-blue-600 hover:underline" data-target="package-not-arrived-page">Was tun, wenn dein Paket nicht angekommen ist?</a></li>
+                                </ul>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-md shadow-sm">
+                                <h3 class="font-semibold text-lg text-blue-800 mb-2">Details zur Lieferung</h3>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><a href="#" class="nav-link text-blue-600 hover:underline" data-target="shipping-costs-page">Informationen zu Versandkosten</a></li>
+                                    <li><a href="#" class="nav-link text-blue-600 hover:underline" data-target="different-address-page">Kannst du eine abweichende Lieferadresse angeben?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Retouren Section -->
+                    <section class="border-b border-gray-200 pb-6">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">Retouren</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-md shadow-sm">
+                                <h3 class="font-semibold text-lg text-green-800 mb-2">Rücksendeprozess</h3>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><a href="#" class="nav-link text-green-600 hover:underline" data-target="return-article-page">Wie sendest du einen Artikel zurück?</a></li>
+                                    <li><a href="#" class="nav-link text-green-600 hover:underline" data-target="defective-article-page">Was machst du mit einem defekten Artikel?</a></li>
+                                </ul>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-md shadow-sm">
+                                <h3 class="font-semibold text-lg text-green-800 mb-2">Reklamationen & Rechte</h3>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><a href="#" class="nav-link text-green-600 hover:underline" data-target="cancellation-rights-page">Informationen zu Reklamationen und Widerrufsrecht</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Allgemeine Bestellanfragen Section -->
+                    <section>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">Allgemeine Bestellanfragen</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-yellow-50 p-4 rounded-md shadow-sm">
+                                <h3 class="font-semibold text-lg text-yellow-800 mb-2">Bestelloptionen</h3>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><a href="#" class="nav-link text-yellow-600 hover:underline" data-target="order-on-invoice-page">Wie kannst du auf Rechnung bestellen?</a></li>
+                                    <li><a href="#" class="nav-link text-yellow-600 hover:underline" data-target="payment-methods-page">Welche Zahlungsmethoden stehen dir zur Verfügung?</a></li>
+                                </ul>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-md shadow-sm">
+                                <h3 class="font-semibold text-lg text-yellow-800 mb-2">Probleme mit der Bestellung</h3>
+                                <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                    <li><a href="#" class="nav-link text-yellow-600 hover:underline" data-target="missing-items-page">Was passiert, wenn Artikel in deiner Lieferung fehlen?</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+            
+            <!-- ============================================== -->
+            <!-- ======== Detailed Help Article Pages ======== -->
+            <!-- ============================================== -->
+
+            <!-- DHL Tracking Page -->
+            <div id="dhl-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Tipps & Tricks zur DHL Sendungsverfolgung</h1>
+                    <p class="text-lg sm:text-xl text-gray-600">Maximiere die Kontrolle über deine Sportlädchen-Lieferungen.</p>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Sobald deine Bestellung von Sportlädchen versandt wurde, erhältst du eine DHL Sendungsnummer. Mit dieser Nummer kannst du dein Paket verfolgen und hast Zugriff auf verschiedene Zustelloptionen. Klicke einfach auf "Jetzt Zustelloptionen wählen" in der Sendungsverfolgung, um deine Präferenzen anzupassen.
+                    </p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">Verfügbare Zustelloptionen</h2>
+                    <section class="bg-blue-50 p-4 rounded-md shadow-sm">
+                        <h3 class="font-semibold text-xl text-blue-800 mb-2">Lieferort oder -tag ändern</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Bist du am voraussichtlichen Zustelltag nicht zu Hause? Kein Problem! Du kannst einfach einen Nachbarn angeben, der dein Paket für dich entgegennimmt, oder einen anderen Zustelltag wählen, der besser in deinen Zeitplan passt.
+                        </p>
+                    </section>
+                    <section class="bg-green-50 p-4 rounded-md shadow-sm">
+                        <h3 class="font-semibold text-xl text-green-800 mb-2">Retouren mit Paketmitnahme beauftragen</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Nutze die praktische Option "Paketmitnahme beauftragen". Wenn du eine neue Bestellung erhältst, kann der Zusteller dein Retourenpaket direkt mitnehmen. Das spart dir den Weg zur Post und macht den Rücksendeprozess noch einfacher.
+                        </p>
+                    </section>
+                    <section class="bg-yellow-50 p-4 rounded-md shadow-sm">
+                        <h3 class="font-semibold text-xl text-yellow-800 mb-2">Annahme nach Versand verweigern</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Manchmal bemerkst du erst nach dem Versand, dass die bestellte Größe oder Farbe doch nicht passt. In diesem Fall kannst du die Annahme des Pakets verweigern. Es wird dann direkt an Sportlädchen zurückgeschickt. Sobald es bei uns eintrifft, erhältst du eine Rückerstattung, und du kannst bequem eine neue Bestellung mit den korrekten Artikeln aufgeben.
+                        </p>
+                    </section>
+                    <p class="text-gray-600 text-sm mt-6">
+                        Zuletzt aktualisiert: 30. Januar 2025 (Veröffentlicht von Sergey Svirida)
+                    </p>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Order Status Page -->
+            <div id="order-status-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Wie kannst du den Status deiner Bestellung überprüfen?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Du wirst regelmäßig per E-Mail über den Status deiner Bestellung bei Sportlädchen informiert. Der Prozess läuft wie folgt ab:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Nachdem deine Bestellung eingegangen ist, erhältst du eine automatische **Bestellbestätigung**.</li>
+                        <li>Sobald dein Paket an den Versanddienstleister übergeben wurde, senden wir dir eine **Versandbestätigung**.</li>
+                        <li>In der Versandbestätigung findest du eine **Sendungsverfolgungsnummer**, mit der du den genauen Verlauf der Zustellung verfolgen kannst.</li>
+                    </ul>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+            
+            <!-- Package Not Arrived Page -->
+            <div id="package-not-arrived-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Was tun, wenn dein Paket nicht angekommen ist?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Sollte dein Paket versandt worden, aber noch nicht angekommen sein, kannst du einen Nachforschungsantrag bei DHL stellen, damit sie den Verbleib des Pakets klären können.
+                    </p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">Wichtige Schritte</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Stelle einen **Nachforschungsantrag bei DHL**. Dies ist der schnellste Weg, um dein Paket zu finden.</li>
+                        <li>Du kannst auch den **DHL-Kundenservice** kontaktieren, um weitere Hilfe zu erhalten.</li>
+                    </ul>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Shipping Costs Page -->
+            <div id="shipping-costs-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Informationen zu Versandkosten</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Die Versandkosten bei Sportlädchen variieren je nach Lieferland:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>**Innerhalb Deutschlands:** Eine Pauschale von **5,95€** pro Bestellung.</li>
+                        <li>**International:** Die Kosten und Lieferzeiten variieren je nach Land.</li>
+                    </ul>
+
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4 mt-6">Versandkosten-Tabelle (International)</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border-collapse rounded-md shadow-sm">
+                            <thead>
+                                <tr class="bg-gray-100 text-left text-gray-600 uppercase text-sm leading-normal">
+                                    <th class="py-3 px-6 text-left">Land</th>
+                                    <th class="py-3 px-6 text-left">Versandkosten</th>
+                                    <th class="py-3 px-6 text-left">Zusätzliche Lieferzeit</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 text-sm font-light">
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Österreich</td>
+                                    <td class="py-3 px-6 text-left">8,95€</td>
+                                    <td class="py-3 px-6 text-left">2 Tage</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Belgien</td>
+                                    <td class="py-3 px-6 text-left">11,95€</td>
+                                    <td class="py-3 px-6 text-left">3 Tage</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Luxemburg</td>
+                                    <td class="py-3 px-6 text-left">11,95€</td>
+                                    <td class="py-3 px-6 text-left">3 Tage</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Niederlande</td>
+                                    <td class="py-3 px-6 text-left">11,95€</td>
+                                    <td class="py-3 px-6 text-left">3 Tage</td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Liechtenstein</td>
+                                    <td class="py-3 px-6 text-left">12,95€</td>
+                                    <td class="py-3 px-6 text-left">3 Tage</td>
+                                </tr>
+                                <tr class="hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">Frankreich</td>
+                                    <td class="py-3 px-6 text-left">12,95€</td>
+                                    <td class="py-3 px-6 text-left">3 Tage</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Different Address Page -->
+            <div id="different-address-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Kannst du eine abweichende Lieferadresse angeben?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Ja, das Angeben einer abweichenden Lieferadresse ist problemlos möglich. Die Lieferadresse muss nicht mit der Rechnungsadresse übereinstimmen.
+                    </p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">So geht's:</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Im **Warenkorb** kannst du im zweiten Schritt ("Zahlungsart & Versandart") eine abweichende Adresse eingeben.</li>
+                        <li>Wenn du ein **Kundenkonto** hast, kannst du dort auch bevorzugte Adressen verwalten.</li>
+                        <li>Für Lieferungen an eine **DHL-Packstation** gibst du im Feld „Straße und Hausnummer“ die „Packstation“ und im Feld „Adresszusatz“ deine persönliche Postnummer an.</li>
+                    </ul>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Return Article Page -->
+            <div id="return-article-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Wie sendest du einen Artikel zurück?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Leider konnte der Inhalt zur Rücksendung von Artikeln nicht erfasst werden. Bitte versuche, eine spezifischere Beschreibung oder eine alternative URL bereitzustellen.
+                    </p>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Defective Article Page -->
+            <div id="defective-article-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Was machst du mit einem defekten Artikel?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Wenn du einen defekten Artikel erhalten hast oder ein Mangel kurz nach dem Kauf auftritt, wende dich bitte direkt an unsere Reklamationsabteilung.
+                    </p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">So reichst du eine Reklamation ein:</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Sende eine E-Mail an **info@sportlaedchen.de**.</li>
+                        <li>Füge eine **kurze Problembeschreibung** hinzu.</li>
+                        <li>Sende ein **Foto**, das den Mangel deutlich zeigt.</li>
+                        <li>Gib deine **Bestell- oder Kundennummer** an.</li>
+                    </ul>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        Nach der Prüfung deiner Reklamation werden wir uns mit den weiteren Schritten bei dir melden.
+                    </p>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Cancellation Rights Page -->
+            <div id="cancellation-rights-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Informationen zu Reklamationen und Widerrufsrecht</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Leider konnte der Inhalt zum Widerrufsrecht nicht erfasst werden, da die Seite möglicherweise nicht öffentlich zugänglich ist.
+                    </p>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Order on Invoice Page -->
+            <div id="order-on-invoice-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Wie kannst du auf Rechnung bestellen?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4">Für Privatkunden (über Klarna)</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Der Rechnungskauf für Privatkunden wird über **Klarna Pay Later** abgewickelt. Du kannst auch die Option "Später bezahlen" von PayPal nutzen.
+                    </p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-blue-700 mb-4 mt-6">Für gewerbliche Kunden (über Billie)</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Als gewerblicher Kunde kannst du auf Rechnung über **Billie** bestellen. Stelle sicher, dass deine Unternehmensdaten korrekt angegeben sind.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        In beiden Fällen rechnest du direkt mit dem jeweiligen Zahlungsdienstleister ab.
+                    </p>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Payment Methods Page -->
+            <div id="payment-methods-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Welche Zahlungsmethoden stehen dir zur Verfügung?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Bei Sportlädchen stehen dir verschiedene bequeme und sichere Zahlungsmethoden zur Auswahl:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>**PayPal:** Mit Optionen wie "Später bezahlen" und Ratenzahlung.</li>
+                        <li>**Apple Pay:** Schnelle und sichere Bezahlung mit biometrischer Authentifizierung.</li>
+                        <li>**Kreditkarte:** Eine klassische und weit verbreitete Zahlungsmethode.</li>
+                        <li>**Kauf auf Rechnung:** Über Klarna (Privatkunden) oder Billie (gewerbliche Kunden).</li>
+                        <li>**Klarna Sofortzahlung:** Für sofortige, sichere Online-Zahlungen.</li>
+                        <li>**SEPA Vorkasse:** Traditionelle Banküberweisung im Voraus.</li>
+                    </ul>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Missing Items Page -->
+            <div id="missing-items-page" class="hidden">
+                <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-800 mb-2">Was passiert, wenn Artikel in deiner Lieferung fehlen?</h1>
+                </header>
+                <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                    <p class="text-gray-700 leading-relaxed">
+                        Wenn du Artikel in deiner Lieferung vermisst, überprüfe bitte zuerst deinen **Lieferschein**.
+                    </p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>Wenn der Artikel auf dem Lieferschein aufgeführt und abgehakt ist, aber nicht im Paket enthalten war, kontaktiere uns bitte mit deiner **Bestellnummer**, damit wir den Vorgang nachverfolgen können.</li>
+                        <li>Es ist auch möglich, dass deine Bestellung in **mehreren Paketen** versandt wurde. Überprüfe deine E-Mails auf weitere Sendungsverfolgungsnummern.</li>
+                    </ul>
+                    <div class="text-center mt-8">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+                            Zurück zur Übersicht "Meine Bestellung"
+                        </button>
+                    </div>
+                </main>
+            </div>
+
+            <!-- Footer for the entire app -->
+            <footer class="w-full text-center mt-8 text-gray-500 text-sm">
+                &copy; 2025 Sportlädchen. Alle Rechte vorbehalten.
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all page containers by their IDs
+            const pages = {
+                'main-page': document.getElementById('main-page'),
+                'dhl-page': document.getElementById('dhl-page'),
+                'order-status-page': document.getElementById('order-status-page'),
+                'package-not-arrived-page': document.getElementById('package-not-arrived-page'),
+                'shipping-costs-page': document.getElementById('shipping-costs-page'),
+                'different-address-page': document.getElementById('different-address-page'),
+                'return-article-page': document.getElementById('return-article-page'),
+                'defective-article-page': document.getElementById('defective-article-page'),
+                'cancellation-rights-page': document.getElementById('cancellation-rights-page'),
+                'order-on-invoice-page': document.getElementById('order-on-invoice-page'),
+                'payment-methods-page': document.getElementById('payment-methods-page'),
+                'missing-items-page': document.getElementById('missing-items-page'),
+            };
+            
+            // Get all navigation links and back buttons
+            const navLinks = document.querySelectorAll('.nav-link');
+            const backButtons = document.querySelectorAll('.back-button');
+
+            // Function to show a page and hide all others
+            function showPage(pageToShowId) {
+                // Hide all pages
+                for (const pageId in pages) {
+                    pages[pageId].classList.add('hidden');
+                }
+                // Show the requested page
+                if (pages[pageToShowId]) {
+                    pages[pageToShowId].classList.remove('hidden');
+                }
+            }
+
+            // Add click event listeners to all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetPageId = e.target.getAttribute('data-target');
+                    if (targetPageId) {
+                        showPage(targetPageId);
+                    }
+                });
+            });
+
+            // Add click event listeners to all back buttons
+            backButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    showPage('main-page');
+                });
+            });
+
+            // Initially show the main page
+            showPage('main-page');
+        });
+    </script>
+</body>
+</html>
