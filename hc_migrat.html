@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meine Bestellung - Sportlädchen Hilfezentrum</title>
+    <!-- Tailwind CSS CDN for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -22,16 +23,23 @@
 
     <div class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
         
+        <!-- Main Container for the entire application -->
         <div id="app-container" class="w-full max-w-4xl">
 
+            <!-- ============================================== -->
+            <!-- ======== Main "Meine Bestellung" Page ======== -->
+            <!-- ============================================== -->
             <div id="main-page">
+                <!-- Header Section -->
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-2">Meine Bestellung</h1>
                     <p class="text-lg sm:text-xl text-gray-800">Alles, was du über deine Bestellungen bei Sportlädchen wissen musst.</p>
                 </header>
 
+                <!-- Main Content Area -->
                 <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-8">
 
+                    <!-- Versand & Lieferung Section -->
                     <section class="border-b border-gray-200 pb-6">
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-600 mb-4 text-center">Versand & Lieferung</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -53,6 +61,7 @@
                         </div>
                     </section>
 
+                    <!-- Retouren Section -->
                     <section class="border-b border-gray-200 pb-6">
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-600 mb-4 text-center">Retouren</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -72,6 +81,7 @@
                         </div>
                     </section>
 
+                    <!-- Allgemeine Bestellanfragen Section -->
                     <section>
                         <h2 class="text-2xl sm:text-3xl font-bold text-gray-600 mb-4 text-center">Allgemeine Bestellanfragen</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -93,6 +103,11 @@
                 </main>
             </div>
             
+            <!-- ============================================== -->
+            <!-- ======== Detailed Help Article Pages ======== -->
+            <!-- ============================================== -->
+
+            <!-- DHL Tracking Page -->
             <div id="dhl-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Tipps & Tricks zur DHL Sendungsverfolgung</h1>
@@ -123,12 +138,13 @@
                     </section>
                     <div class="text-center mt-8">
                         <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
+                        Zurück zur Übersicht "Meine Bestellung"
                         </button>
                     </div>
                 </main>
             </div>
 
+            <!-- Order Status Page -->
             <div id="order-status-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Wie kann ich den Status meiner Bestellung überprüfen?</h1>
@@ -146,14 +162,14 @@
                             <li>In der Versandbestätigung findest du einen <b>Link zur Sendungsverfolgung</b> für dein Paket, mit dem du den genauen Verlauf der Zustellung verfolgen kannst.</li>
                         </ul>
                     </section>
-                    <div class="text-center mt-8">
-                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+                    <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
             
+            <!-- Package Not Arrived Page -->
             <div id="package-not-arrived-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Was tun, wenn mein Paket nicht angekommen ist?</h1>
@@ -169,12 +185,13 @@
                     </section>
                     <div class="text-center mt-8">
                         <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Shipping Costs Page -->
             <div id="shipping-costs-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Informationen zu Versandkosten</h1>
@@ -354,12 +371,13 @@
                     
                     <div class="text-center mt-8">
                         <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Different Address Page -->
             <div id="different-address-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Kann ich eine abweichende Lieferadresse angeben?</h1>
@@ -375,13 +393,14 @@
                         </ul>
                     </section>
                     <div class="text-center mt-8">
-                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+                       <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Return Article Page -->
             <div id="return-article-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Wie sende ich einen Artikel zurück?</h1>
@@ -400,12 +419,13 @@
                     </section>
                     <div class="text-center mt-8">
                         <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Defective Article Page -->
             <div id="defective-article-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Was mache ich mit einem defekten Artikel?</h1>
@@ -425,13 +445,14 @@
                         Nach der Prüfung deiner Reklamation werden wir uns mit den weiteren Schritten bei dir melden.
                     </p>
                     <div class="text-center mt-8">
-                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+                       <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Cancellation Rights Page -->
             <div id="cancellation-rights-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Informationen zu Reklamationen und Widerrufsrecht</h1>
@@ -442,42 +463,60 @@
                         Leider konnte der Inhalt zum Widerrufsrecht nicht erfasst werden, da die Seite möglicherweise nicht öffentlich zugänglich ist.
                     </p>
                     <div class="text-center mt-8">
-                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
                             Zurück zur Übersicht "Meine Bestellung"
                         </button>
                     </div>
                 </main>
             </div>
 
+            <!-- Order on Invoice Page -->
             <div id="order-on-invoice-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Wie kann ich auf Rechnung bestellen?</h1>
                     <p class="text-base sm:text-lg text-gray-800">Hier erklären wir dir den Prozess des Rechnungskaufs.</p>
                 </header>
                 <main class="w-full bg-white shadow-lg rounded-lg p-6 sm:p-8 space-y-6">
+                     <section class="bg-yellow-50 p-4 rounded-md shadow-sm mt-6">
+                        <h3 class="font-semibold text-xl text-yellow-800 mb-2">Kauf auf Rechnung by Sportlädchen</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Als gewerblicher Kunde beziehungsweise als Firma, Verein, Behörde oder NGO kannst du jederzeit auf Rechnung bestellen. Einfach bei der Online-Bestellung auf https://www.sportlaedchen.de/ den Kontotyp "Gewerblicher Endverbraucher" auswählen und die Orga beziehungsweise das Unternehmen unter "Firma" eintragen. Auf der nächsten Seite kannst du dann die Zahlungsart "Kauf auf Rechnung by Sportlädchen" auswählen und die Bestellung aufgeben. Wir versenden in der Regel am Tag der Bestellung oder spätestens am Folgetag. Beim Warenversand erfolgt eine Benachrichtigung per Email mit der Rechnung im Anhang.
+                        <br><br>
+                        In diesem Fall übermittelst du die Zahlung direkt an Sportlädchen per Überwesiung oder per PayPal.<br>
+                        <b>Unsere Bankverbindung:</b><br>
+                        KONTOINHABER: Sportlädchen GmbH<br>
+                        KREDITINSTITUT: Sparkasse KölnBonn<br> 
+                        IBAN: DE49370501981007872698<br> 
+                        BIC: COLSDE33XXX<br> 
+                        REFERENZ: Bestell-, Auftrags- oder Rechnungsnummer<br>
+                        <br>
+                        <b>Unsere PayPal-Adresse:</b> paypal@sportlaedchen.de<br><br>
+                        </p>
+                    </section>
                     <section class="bg-yellow-50 p-4 rounded-md shadow-sm">
                         <h3 class="font-semibold text-xl text-yellow-800 mb-2">Für Privatkunden (über Klarna)</h3>
                         <p class="text-gray-700 leading-relaxed">
-                            Der Rechnungskauf für Privatkunden wird über **Klarna Pay Later** abgewickelt. Du kannst auch die Option "Später bezahlen" von PayPal nutzen.
+                            Der Rechnungskauf für Privatkunden wird über <b>Klarna Pay Later</b> abgewickelt. Du kannst alternativ auch die Option <b>"Später bezahlen"</b> von <b>PayPal</b> nutzen.
                         </p>
                     </section>
                     <section class="bg-yellow-50 p-4 rounded-md shadow-sm mt-6">
                         <h3 class="font-semibold text-xl text-yellow-800 mb-2">Für gewerbliche Kunden (über Billie)</h3>
                         <p class="text-gray-700 leading-relaxed">
-                            Als gewerblicher Kunde kannst du auf Rechnung über **Billie** bestellen. Stelle sicher, dass deine Unternehmensdaten korrekt angegeben sind.
+                            Als gewerblicher Kunde kannst du auf Rechnung über <b>Billie</b> bestellen. Das ist ein Zahlungsdienstleister und eine Parnter von Klarna, der sich auf Zahlungsabwicklung für B2B-Käufe spezialisiert. Stelle sicher, dass deine Unternehmensdatenbei der Bestellung korrekt angegeben sind.
                         </p>
                     </section>
                     <p class="text-gray-700 leading-relaxed mt-4">
-                        In beiden Fällen rechnest du direkt mit dem jeweiligen Zahlungsdienstleister ab.
+                        In diesen beiden Fällen rechnest du direkt mit dem jeweiligen Zahlungsdienstleister ab.
                     </p>
                     <div class="text-center mt-8">
-                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+                       <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Payment Methods Page -->
             <div id="payment-methods-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Welche Zahlungsmethoden stehen mir zur Verfügung?</h1>
@@ -500,12 +539,13 @@
                     </section>
                     <div class="text-center mt-8">
                         <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
-                            Zurück zur Übersicht "Meine Bestellung"
-                        </button>
+    Zurück zur Übersicht "Meine Bestellung"
+</button>
                     </div>
                 </main>
             </div>
 
+            <!-- Missing Items Page -->
             <div id="missing-items-page" class="hidden">
                 <header class="w-full bg-white shadow-md rounded-lg p-6 mb-8 text-center" style="background-color: #fbb800;">
                     <h1 class="text-xl sm:text-2xl font-extrabold text-gray-800 mb-2">Was passiert, wenn Artikel in meiner Lieferung fehlen?</h1>
@@ -523,13 +563,14 @@
                         </ul>
                     </section>
                     <div class="text-center mt-8">
-                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-gray-800" style="background-color: #fbb800;">
+                        <button class="back-button inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150 ease-in-out">
                             Zurück zur Übersicht "Meine Bestellung"
                         </button>
                     </div>
                 </main>
             </div>
 
+            <!-- Footer for the entire app -->
             <footer class="w-full text-center mt-8 text-gray-500 text-sm">
                 &copy; 2025 Sportlädchen. Alle Rechte vorbehalten.
             </footer>
